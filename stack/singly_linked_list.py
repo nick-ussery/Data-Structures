@@ -3,22 +3,20 @@
 
 
 class Node:
-    def __init__(self, value, next_node=None):
-        # the value that the node is holding
+    def __init__(self, value=None, next_node=None):
+        # the value at this linked list node
         self.value = value
-        # reference to the next node in the linked list
+        # reference to the next node in the list
         self.next_node = next_node
-# method to get the value of the node
 
     def get_value(self):
         return self.value
-# method to get the node's `next_node`
 
     def get_next(self):
         return self.next_node
-# method to update the node's `next_node` to the input node
 
     def set_next(self, new_next):
+        # set this node's next_node reference to the passed in node
         self.next_node = new_next
 
 
