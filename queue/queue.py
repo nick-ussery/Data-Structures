@@ -52,13 +52,17 @@ class Queue:
         return self.size
 
     def enqueue(self, new_value):
+        # print("adding new value: ", new_value)
         self.storage.add_to_tail(new_value)
-        self.size += 1
+        self.size = self.size + 1
 
     def dequeue(self):
         if self.size > 0:
-            value = self.storage.remove_head()
+            # print("self.size is greater than 0", self.size)
+            removed_value = self.storage.remove_head()
             self.size -= 1
-            return value
+            # print("removing value: ", removed_value)
+            return removed_value
         else:
+            # print("self.size was not > 0")
             return None

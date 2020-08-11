@@ -29,7 +29,7 @@ class LinkedList:
         # needs to have a node to add the list to
         new_node = Node(value)
         # check if Linked List is empty
-        if self.head is None and self.head is None:
+        if self.head is None and self.tail is None:
             self.head = new_node
             self.tail = new_node
         else:
